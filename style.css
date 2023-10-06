@@ -1,0 +1,137 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    font-size: 62.5%;
+}
+
+body {
+    background: linear-gradient(45deg, #190361, #bb00ff);
+    animation: gradient 10s ease infinite;
+    background-size: 200% 200%;
+    font-size: 1.6rem;
+    display: grid;
+    height: 100vh;
+    place-items: center;
+}
+
+.hide {
+    display: none;
+}
+
+main {
+    margin-top: -1rem;
+    width: min(90%,42.8rem);
+    padding: 4.8rem 6.4rem 6.4rem 6.4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    background: #FFF;
+    border-radius: .5rem;
+    box-shadow: 0px 20px 50px 0px rgba(0, 0, 0, 0.80);
+}
+
+h2, p {
+    color: #34355B;
+    text-align: center;
+}
+
+main h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-family: 2.4rem;
+    font-weight: 700;
+    margin-bottom: 1.4rem;
+}
+
+main p {
+    margin-bottom: 2.6rem;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 1.5rem;
+}
+
+.img-snack {
+    background-image: url('images/img-snack.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 19rem;
+    height: 16rem;
+    margin: 0 auto;
+}
+
+.screen-one > .img-snack:hover {
+    position: relative;
+    cursor: pointer;
+    animation: shake 0.07s;
+    animation-iteration-count: infinite;
+}
+
+.screen-two p {
+    color: #000;
+    font-family: 'Dancing Script';
+    font-size: 2.4rem;
+    padding: 1rem;
+    background: #E4EDF1;
+    box-shadow: 2px 2px 2px 0px rgba(85, 85, 85, 0.50);
+    animation: open-snack 2s;
+    position: relative;
+}
+
+.screen-two .img-snack {
+    background-image: url('images/snack-img-open.svg');
+    height: 11rem;
+    width: 23rem;
+}
+
+.screen-two button {
+    color: #FFF;
+    font-family: 'DM Sans';
+    font-size: 1.2rem;
+    font-weight: 700;
+    padding: 1.6rem;
+    background: #FF9500;
+    border-radius: .4rem;
+    border: none;
+    margin: 4rem auto 0 auto;
+    display: block;
+    transition: background 0.5s;
+}
+
+.screen-two button:hover {
+    cursor: pointer;
+    background: #c77400;
+}
+
+@keyframes shake {
+    0% {left: 0;}
+    13% {top: .5rem;}
+    25% {left: .5rem;}
+    38% {top: 0;}
+    50% {left: 0;}
+    63% {top: -.5rem;}
+    75% {left: -.5rem;}
+    88% {top: 0;}
+    100% {left: 0;}
+}
+
+@keyframes open-snack {
+    0% {
+        top: 15rem;
+        transform: scale(0);
+    }
+
+    100% {
+        top: 0;
+        transform: scale(1);
+    }
+}
+
+@keyframes gradient {
+    0% {background-position: 0% 50%;}
+    50% {background-position: 100% 50%;}
+    100% {background-position: 0% 50%;}
+}
